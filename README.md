@@ -30,15 +30,15 @@ git push -u origin main
 
 ### 3. Включите Pages
 
-В репозитории:
+1. Запушьте обновлённый код (`git add . && git commit && git push`)
+2. Дождитесь зелёного workflow — он зальёт папку `dist` в ветку `gh-pages`
+3. [Settings → Pages](https://github.com/ruillo747/vizex/settings/pages):
+   - **Source:** Deploy from a **branch**
+   - **Branch:** `gh-pages` / folder `/ (root)` → Save
 
-1. **Settings → Pages**
-2. Source: **GitHub Actions**
-3. Откройте вкладку **Actions** и дождитесь workflow **Deploy to GitHub Pages** (зелёная галочка)
+Не выбирайте ветку `main` — там исходники, сайт будет белым.
 
-Сайт будет здесь:
-
-`https://ВАШ_ЛОГИН.github.io/vizex/`
+Адрес: `https://ruillo747.github.io/vizex/`
 
 ### 4. Откройте на Android
 

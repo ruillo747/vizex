@@ -284,4 +284,8 @@ async function maybeFinish() {
   rst.innerHTML = `<span class="ok">Файл собран.</span> <a class="btn ok" style="display:inline-block;margin-top:8px" href="${url}" download="${encodeURIComponent(h.name)}">Скачать ${escapeHtml(h.name)}</a>`;
 }
 
-render();
+try {
+  render();
+} catch (err) {
+  app.textContent = 'Ошибка: ' + (err && err.message ? err.message : String(err));
+}
